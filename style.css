@@ -1,39 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
+    font-size: clamp(1rem, 2rem, 1.5rem);
+    background-image: url(9885453.jpg);
     color: rgb(2, 60, 60);
     background-color: whitesmoke;
-    background-image: url(IMG/9885453.jpg);
     background-size: 100%;
-    max-height: 100vh;
-    max-width: 100vw;
-    font-size: clamp(1rem, 2.5em, 2rem);
+    width: 100%;/* 
+    height: 100vh; */
     object-fit: cover;
 }
 
 .main {
-    display: flex;
-    justify-content: center;
+    margin: 10em 15em 7em 13em;
+    width: 50%;
 }
 
 .container {
-    font-size: 4em;
     background-color: rgba(108, 227, 184, 0.719);
-    width: 20%;
+    width: 80%;
     text-align: center;
-    padding: 2rem;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
+    gap: 1rem;
+    padding: 2rem;
 }
 
 .white, .green {
+    width: 60%;
     border: none;
     border-radius: 5px;
     padding: 1rem 0 1rem 0;
-    font-size: 2rem;
     font-weight: bold;
-    width: 30%;
 }
 
 .green:active, .white:active {
@@ -47,25 +51,53 @@ body {
     margin-top: 2rem;
 }
 
-.save-el{
-    font-size: 2rem; 
-    padding: 1rem 0 1rem 0;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+    .main {
+        margin: 8em;
+        width: 50%;
+    }
 
     .container {
-        font-size: 2rem;
+        width: 100%;
+    }
+
+    .white, .green {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 430px) {
+    .main {
+        font-size: 1rem;
+        margin: 10em 5em 4em 7em;
         width: 50%;
-        margin-top: 2rem;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
     }
 
-    .white, .green{
-        font-size: 1.5rem;
-        width: 70%;
+    .container {
+        width: 100%;
+        padding: 2rem;
     }
 
+    .white, .green {
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 330px) {
+    .main {
+        font-size: 1rem;
+        margin: 10em 4em 4em 5rem;
+        width: 50%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .white, .green {
+        width: 100%;
+    }
+    
 }
